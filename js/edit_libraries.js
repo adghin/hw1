@@ -9,6 +9,13 @@ function onJSONLibs(json) {
 			appendHTML(item.id,item.name);
 		}
 	}
+	else {
+		const p = document.createElement('p');
+		p.textContent = "Nessuna libreria presente!";
+		p.classList.add('no-lib-found');
+
+		results_container.appendChild(p);
+	}
 }
 
 function onEdited(json) {
