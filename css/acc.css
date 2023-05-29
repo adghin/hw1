@@ -1,0 +1,519 @@
+/** Regole comuni alle pagine dopo il login **/
+.no-scroll {
+	overflow: hidden;
+}
+
+a.new {
+	color: rgb(25 26 37);
+	text-decoration: underline;
+}
+
+.account-section {
+	flex-direction: row;
+	align-items: flex-start;
+}
+
+.col-1 {
+	width: 20%;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	border-right: 1px solid lightgray;
+	border-radius: 0px;
+}
+
+.col-item {
+	padding-top: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.col-item h3 {
+	padding-left: 6px;
+	margin: 10px auto;
+	font-size: 1.2em;
+	text-align: center;
+}
+
+.libs {
+	color: rgb(25 26 37);
+	padding-top: 5px;
+	padding-left: 15px;
+	letter-spacing: 1px;
+}
+
+.col-item span {
+	font-size: 0.9em;
+}
+
+.col-item a {
+	font-size: 0.8em;
+}
+
+a.mylibs {
+	color: rgb(25 26 37);
+	margin-top: 10%;
+}
+
+.libs.create, a.mylibs {
+	font-size: 1em;
+	text-decoration: underline;
+}
+
+.libs.create:hover, a.mylibs:hover {
+	cursor: pointer;
+}
+
+.libs.create:before {
+	content: '\002B';
+	font-weight: bold;
+	font-size: 1.4em;
+}
+
+.libs-label:before {
+	background-image: url(book.png);
+    background-size: 13px 13px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 13px; 
+    height: 13px;
+    content:"";
+    padding-right: 5px;
+}
+
+.col-item a:hover, .libs.create:hover {
+	color: rgb(153 121 91);
+	transition: .2s ease-in-out;
+	-moz-transition: .2s ease-in-out;
+	-webkit-transition: .2s ease-in-out;
+	-o-transition: .2s ease-in-out;
+}
+
+#circle {
+	width: 70px;
+	height: 70px;
+	border: 2px solid rgb(153 121 91);
+	border-radius: 100px;
+
+	margin: 0 auto;
+
+	background-color: white;
+	background-image: url(cat-icon.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.col-1-subitem {
+	width: 90%;
+	height: 70px;
+	margin-left: 15px;
+}
+
+.col-1-subitem span {
+	font-size: 0.7em;
+	margin-left: 18px;
+}
+
+.col-2 {
+	width: 80%;
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.col-2.explore {
+	width: 100%;
+}
+
+.col-2.edit {
+	width: 100%;
+}
+
+.col-2.edit .libs.create {
+	text-align: right;
+	margin-right: 15%;
+}
+
+.col-2 .col-item span, .col-2.explore > span {
+	margin-top: 50px;
+	font-size: 2.4em;
+	text-align: center;
+	letter-spacing: 1.2px;
+}
+
+.col-2 h6 {
+	display: flex;
+	margin: 0 auto;
+}
+
+.powered {
+	max-width: 50px;
+	margin-left: 5px;
+}
+
+#search-content {
+	margin: 10px auto;
+	width: 80%;	
+}
+
+#search-content input {
+	width: 100%;
+	height: 30px;
+	border: 1px solid lightslategray;
+	outline: none;
+	color: rgb(153 121 91);
+}
+
+#search-content input[placeholder] {
+	font-family: 'Libre Baskerville', sans-serif;
+	font-size: 0.7em;
+	padding: 5px;
+}
+
+#search-content input:focus {
+	color: rgb(25 26 37);
+	border: 1px solid rgb(153 121 91);
+}
+
+.loading {
+	width: 10%;
+	height: 10%;
+	margin: 0 auto;
+}
+
+#flex-container.scroll {
+	overflow-y: scroll;
+}
+
+#flex-container:first-child.hidden {
+	display: none;
+}
+
+.second-child p {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+			line-clamp: 4; 
+	-webkit-box-orient: vertical;
+
+	text-align: justify;
+	color: #806e6e;
+	font-size: 0.9rem;
+	line-height: 25px;
+	margin-top: 20px;
+}
+
+.third-child.explore {
+	display: flex;
+}
+
+.third-child.explore form {
+	display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.third-child.explore form.hidden {
+	display: none;
+}
+
+.third-child.explore form input {
+	background-color: rgb(228 228 228);
+    cursor: pointer;
+    font-family: 'Libre Baskerville', sans-serif;
+    font-size: 3em;
+    font-weight: 200;
+    color: rgb(25 26 37);
+    border: none;
+    border-radius: 1px;
+    outline: none;
+    box-shadow: 0 0.5rem 0.5rem lightslategray;
+    width: 30%;
+}
+}
+
+.third-child.explore form input.hidden {
+	display: none;
+}
+
+.third-child .div-options {
+	display: flex;
+	height: 100%;
+	width: 100%;
+	flex-direction: column;
+	justify-content: center;
+	border-left: 1px solid lightgray;
+	overflow-y: scroll;
+}
+
+.div-options.saved {
+	background-color: #60c000;
+}
+
+.div-options.warning {
+	background-color: rgb(205 78 78);
+}
+
+.div-options.saved p, .div-options.warning p {
+	text-align: center;
+	color: white;
+}
+
+.div-options .closeOptions {
+	text-align: right;
+}
+
+.closeOptions.hidden {
+	display: none;
+}
+
+.third-child form input:hover {
+	background-color: rgb(25 26 37);
+	color: white;
+
+	transition: .2s ease-in-out;
+	-moz-transition: .2s ease-in-out;
+	-webkit-transition: .2s ease-in-out;
+	-o-transition: .2s ease-in-out;
+}
+
+/**
+Poiché in CSS non possiamo selezionare l'elemento precedente, mettiamo le star in un contenitore con display: flex e 
+flex-direction: row-reverse, in modo da vedere le stelle colorarsi da sinistra verso destra e non viceversa
+**/
+.star-div {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+	align-items: flex-start; 	
+}
+
+.star-div .star {
+	cursor: pointer;
+	font-size: 1.5em;
+	font-weight: 100;
+	color: lightgray;
+	margin: 0;
+}
+
+.star-div .star:before {
+	content: '★';
+	display: inline-block;
+}
+
+/**
+Con il selettore > selezioniamo tutti gli span che sono figli di .star-div;
+con il selettore ~ selezioniamo tutti gli span che sono preceduti dagli elementi span:hover che sono figli di .star-div;
+**/
+.star-div > span:hover,
+.star-div > span:hover ~ span {
+	color: #ff8c00;
+}
+
+.star-div .star.rated {
+	color: #ff8c00;
+}
+
+.fourth-child p {
+	font-size: 0.7em;
+}
+
+.flex-item div img {
+	width: 150px;
+	height: 220px;
+	background-size: cover;
+	display: block;
+	margin: auto;
+	padding: 25px;
+}
+
+.flex-item div img.resized {
+	width: 80px;
+	height: 115px;
+	padding: 0;
+	margin: 0;
+}
+
+.sixth-child {
+	background-image: url('delete_book.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.sixth-child:hover {
+	filter: brightness(0) saturate(100%) invert(41%) sepia(29%) saturate(1313%) hue-rotate(315deg) brightness(97%) contrast(83%);
+
+	transition: .3s ease-in-out;
+	-moz-transition: .3s ease-in-out;
+	-webkit-transition: .3s ease-in-out;
+	-o-transition: .3s ease-in-out;
+}
+
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0,0.7);
+	z-index: 2;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.alert {
+	width: 50%;
+	height: 30%;
+	background-color: #f5f5f7;
+	border: 1px solid lightgray;
+	border-radius: 10px;
+
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.alert h3 {
+	font-size: 1.2em;
+	font-weight: 100;
+    text-align: center;
+    letter-spacing: 1.2px;
+}
+
+.alert .closeModal {
+	margin-left: 93%;
+	margin-top: -85px;
+}
+
+.alert .closeModal:before, .closeOptions:before {
+	content: '\00d7';
+    font-size: 2em;
+    font-weight: bold;
+    color: rgb(205 78 78);
+    cursor: pointer;
+}
+
+.alert form {
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+}
+
+.alert form input {
+	border: 1px solid lightslategray;
+	border-radius: 1px;
+	height: 30px;
+	margin-top: 10px;
+	outline: none;
+}
+
+.alert form input[placeholder] {
+	font-family: 'Libre Baskerville', sans-serif;
+	font-size: 0.7em;
+	padding: 5px;
+}
+
+.alert form input[type="submit"]  {
+	background-color: rgb(25 26 37);
+	cursor: pointer;
+
+	font-family: 'Libre Baskerville', sans-serif;
+	font-size: 1em;
+	font-weight: 200;
+	color: white;
+}
+
+.alert form input:focus {
+	border: 1px solid rgb(153 121 91);
+}
+
+.alert input[type="submit"]:hover {
+	background-color: white;
+	color: rgb(153 121 91);
+	border: 1px solid rgb(153 121 91);
+
+	transition: .2s ease-in-out;
+	-moz-transition: .2s ease-in-out;
+	-webkit-transition: .2s ease-in-out;
+	-o-transition: .2s ease-in-out;
+}
+
+.alert button {
+	width: 70px;
+	height: 50px;
+	background-color: rgb(25 26 37);
+	cursor: pointer;
+
+	color: lightgray;
+	border: 1px solid lightgray;
+	border-radius: 5px;
+
+	font-family: 'Libre Baskerville', sans-serif;
+	margin: 20px;
+}
+
+.alert button:first-child {
+	background-color: rgb(205 78 78);
+}
+
+.alert button:first-child:hover {
+	background-color: rgb(233 17 17);
+	color: white;
+	border: 1px solid rgb(233 17 17);
+
+	transition: .2s ease-in-out;
+	-moz-transition: .2s ease-in-out;
+	-webkit-transition: .2s ease-in-out;
+	-o-transition: .2s ease-in-out;
+}
+
+.alert button:nth-child(2):hover {
+	background-color: white;
+	color: rgb(153 121 91);
+	border: 1px solid rgb(153 121 91);
+
+	transition: .2s ease-in-out;
+	-moz-transition: .2s ease-in-out;
+	-webkit-transition: .2s ease-in-out;
+	-o-transition: .2s ease-in-out;
+}
+
+.hidden {
+	display: none;
+}
+
+span.edit {
+	text-decoration: underline;
+	cursor: pointer;
+	font-weight: 100;
+}
+
+.edit.remove {
+	color: red;
+}
+
+.edit.hide {
+	color: lightgray;
+}
+
+#flex-container.edit {
+	width: 70%;
+}
+
+.error-msg {
+	font-size: 0.8em;
+    margin-top: 2%;
+    color: red;
+}

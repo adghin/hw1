@@ -1,0 +1,67 @@
+/** Regole per home.php **/
+#home-nav {
+	background-color: rgba(6, 15, 34, 0.8);
+}
+
+header {
+	height: 500px;
+	position: relative;
+	background-image: url(header.jpg);
+	background-size: cover;
+}
+
+#overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#header-container {
+	width: 780px;
+	text-align: center;
+	position: relative;
+	top: 30%;
+	margin: 0 auto;
+}
+
+#header-container h1,h4 {
+	padding: 10px;
+	color: white;
+	font-weight: 100;
+}
+
+#header-container h4 {
+	line-height: 25px;
+}
+
+.rated-books > span {
+	margin-top: 50px;
+	font-size: 2.4em;
+	text-align: center;
+	letter-spacing: 1.2px;
+}
+
+.medals {
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+	padding: 2%;
+}
+
+#gold {
+	background-image: url(gold.png);
+	background-size: 80px 100px;
+}
+
+#silver {
+	background-image: url(silver.png);
+	background-size: 145px 100px;
+}
+
+#bronze {
+	background-image: url(bronze.png);
+	background-size: 145px 100px;
+}

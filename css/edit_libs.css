@@ -1,0 +1,63 @@
+.second-child.align-right {
+	text-align: right;
+}
+
+.edit-form {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.edit-remove {
+	color: red;
+}
+
+.edit-input, .edit-submit, .edit-abort {
+	border: 1px solid lightgray;
+	outline: none;
+	padding: 1%;
+
+	font-family: 'Libre Baskerville', serif;
+	font-size: 0.8em;
+}
+
+.edit-input {
+	width: 100%;
+}
+
+.edit-submit, .edit-abort {
+	width: 50%;
+	cursor: pointer;
+}
+
+.edit-submit {
+	background-color: #191a25;
+    color: white;
+}
+
+.edit-abort {
+	background-color: #ff6c6c;
+}
+
+.edit-submit:hover {
+	color: #191a25;
+	background-color: white;
+
+	transition: .2s ease-in-out;
+	-webkit-transition: .2s ease-in-out;
+	-moz-transition: .2s ease-in-out;
+	-o-transition: .2s ease-in-out;
+}
+
+.edit-abort:hover {
+	background-color: white;
+	color: #ff6c6c;
+
+	transition: .2s ease-in-out;
+	-webkit-transition: .2s ease-in-out;
+	-moz-transition: .2s ease-in-out;
+	-o-transition: .2s ease-in-out;
+}
+
+.first-child p.hide {
+	color: lightgray;
+}
