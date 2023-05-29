@@ -17,6 +17,16 @@ function onEdited(json) {
 	}
 }
 
+function onLibRemoved(json) {
+	if(json.correctly_removed == true) {
+		alert_modal.innerHTML = '';
+		modal.classList.add('hidden');
+		document.body.classList.remove('no-scroll');
+
+		getLibraries();
+	}
+}
+
 function renameLibrary(event) {
 	const library = event.currentTarget.parentNode.parentNode;
 	const name = library.querySelector('.first-child');
