@@ -26,7 +26,7 @@
 			}	
 			if(!preg_match($validPwd,$_POST["password"])) {
 				$flag_error = true;
-				$error[] = "La password deve avere una lungehzza di almeno 8 caratteri e contenere almeno uno tra i seguenti: 1 carattere minuscolo, 1 carattere maiuscolo, un numero e un simbolo tra ( -_$&)!";
+				$error[] = "La password deve avere una lungehzza di almeno 8 caratteri e contenere almeno uno tra i seguenti: 1 carattere minuscolo, 1 carattere maiuscolo, un numero e un carattere speciale";
 			}
 			if(strcmp($_POST["password"], $_POST["repassword"]) !== 0) {
 				$flag_error = true;
