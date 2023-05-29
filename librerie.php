@@ -20,6 +20,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Charm&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Charm&family=Libre+Baskerville&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
+		<script src="js/add_lib.js" defer></script>
 		<script src="js/edit_libraries.js" defer></script>
 		<script src="js/resp_menu.js" defer></script>
 	</head>
@@ -43,7 +44,7 @@
 				</div>
 				<div id="flex-container" class="edit">
 				</div>
-				<span class="libs create">Aggiungi una libreria</span>
+				<span class="libs create" data-from-target="edit_libs">Aggiungi una libreria</span>
 				<div class="modal hidden">
 					<div class="alert"></div>
 				</div>
