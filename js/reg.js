@@ -74,7 +74,7 @@ function onBlurPwd(event) {
 	const validPwd   = /^(?=.{8,}$)(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9])(?=.*?\W)/;
 	const parent = event.target.parentNode;
 	if(!event.target.value.match(validPwd)) {
-		const error = "La password deve avere una lungehzza di almeno 8 caratteri e contenere almeno uno tra i seguenti: 1 carattere minuscolo, 1 carattere maiuscolo, un numero e un simbolo tra ( -_$&)";
+		const error = "La password deve avere una lungehzza di almeno 8 caratteri e contenere almeno uno tra i seguenti: 1 carattere minuscolo, 1 carattere maiuscolo, un numero e un carattere speciale";
 		createError(error,parent);
 	}
 	else {
