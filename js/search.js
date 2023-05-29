@@ -113,6 +113,7 @@ function getLibraries(from_target) {
 				new_lib.textContent = "Crea libreria";
 				new_lib.classList.add('libs');
 				new_lib.classList.add('create');
+				new_lib.dataset.fromTarget = "explore";
 				from_target.querySelector('.div-options').appendChild(new_lib);
 
 				new_lib.addEventListener('click',addLibrary);
@@ -135,10 +136,11 @@ function getLibraries(from_target) {
 				new_lib.textContent = "Crea libreria";
 				new_lib.classList.add('libs');
 				new_lib.classList.add('create');
+				new_lib.dataset.fromTarget = "explore";
 				from_target.querySelector('.div-options').appendChild(new_lib);
 
-				new_lib.addEventListener('click',addLibrary);
 
+				new_lib.addEventListener('click',addLibrary);
 			}
 	});
 }

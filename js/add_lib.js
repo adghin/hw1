@@ -1,41 +1,8 @@
-function createLibrary(event) {	
-	event.preventDefault();
-	
-	const form = event.currentTarget;
-
-	if(form.querySelector('.error-msg')) {
-		form.removeChild(form.querySelector('.error-msg'));
-	}
-	if((form.querySelector('#content').value == "") || 
-		(form.querySelector('#content').value.trim().length === 0)) {
-			const error = document.createElement('p');
-			error.textContent = "Il campo non può essere vuoto!";
-			error.classList.add('error-msg');
-
-			form.appendChild(error);
-			form.querySelector('#content').value = "";
-	}
-	else {
-		const library_name = form.querySelector('#content').value;
-
-		const url = "http://localhost/hw1/php/add_library.php";
-		let data = new FormData();
-		data.append("lib-name",library_name);
-
-		fetch(url,
-				{
-					method: 'POST',
-					body: data 
-				}
-		).then(onResponse).then(validResponse); 
-	}
-}
-
 function onResponse(response) {
 	return response.json();
 }
 
-function validResponse(json) {
+function validResponseExplore(json) {
 	if(json.added_library == true) {
 		modal.classList.add('hidden');
 		document.body.classList.remove('no-scroll');
@@ -56,8 +23,19 @@ function validResponse(json) {
 	}
 }
 
+function validResponseEdit(json) {
+	if(json.added_library == true) {
+		modal.classList.add('hidden');
+		document.body.classList.remove('no-scroll');
+
+		getLibraries();
+	}
+}
+
 /** addLibrary apre la modale con il form **/
 function addLibrary(event) {
+	const origin = event.currentTarget.dataset.fromTarget;
+
 	alert_modal.innerHTML = '';
 	const h3 = document.createElement('h3');
 	const close = document.createElement('span');
@@ -80,8 +58,6 @@ function addLibrary(event) {
 	form.appendChild(input);
 	form.appendChild(submit);
 
-	form.addEventListener('submit',createLibrary);
-
 	alert_modal.appendChild(close);
 	alert_modal.appendChild(h3);
 	alert_modal.appendChild(form);
@@ -94,6 +70,48 @@ function addLibrary(event) {
 
 	modal.classList.remove('hidden');
 	document.body.classList.add('no-scroll');
+
+	form.addEventListener('submit',(event) => {
+		event.preventDefault();
+		const form = event.currentTarget;
+
+		if(form.querySelector('.error-msg')) {
+			form.removeChild(form.querySelector('.error-msg'));
+		}
+		if((form.querySelector('#content').value == "") || 
+			(form.querySelector('#content').value.trim().length === 0)) {
+				const error = document.createElement('p');
+				error.textContent = "Il campo non può essere vuoto!";
+				error.classList.add('error-msg');
+
+				form.appendChild(error);
+				form.querySelector('#content').value = "";
+		}
+		else {
+			const library_name = form.querySelector('#content').value;
+
+			const url = "http://localhost/hw1/php/add_library.php";
+			let data = new FormData();
+			data.append("lib-name",library_name);
+
+			if(origin == "explore") {
+				fetch(url,
+						{
+							method: 'POST',
+							body: data 
+						}
+				).then(onResponse).then(validResponseExplore); 
+			}
+			if(origin == "edit_libs") {
+				fetch(url,
+						{
+							method: 'POST',
+							body: data 
+						}
+				).then(onResponse).then(validResponseEdit); 
+			}
+		}
+	});
 }
 
 function closeModal(event) {
