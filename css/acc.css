@@ -134,8 +134,7 @@ a.mylibs {
 }
 
 .col-2.edit .libs.create {
-	text-align: right;
-	margin-right: 15%;
+	text-align: center;
 }
 
 .col-2 .col-item span, .col-2.explore > span {
