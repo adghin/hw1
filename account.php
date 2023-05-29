@@ -41,7 +41,7 @@
 					<div id="circle"></div>
 					<?php
 						echo "<h3>";
-						echo "Bentornato, ".$_SESSION["_bookclub_username"]."";
+						echo "Benvenuto, ".$_SESSION["_bookclub_username"]."";
 						echo "</h3>";
 					?>
 				</div>
