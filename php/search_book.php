@@ -9,7 +9,7 @@
 	$query = $_GET["q"];
 	$gbooks_key = 'AIzaSyD3UU0O6qQ3plwI3ydsAaR6PeAVY1yX6-Q';
 	$gbooks_endpoint = 'https://www.googleapis.com/books/v1/volumes?';
-	$max_results = 10;
+	$max_results = 20;
 	
 	$param = array("q" => $query, "key" => $gbooks_key, "maxResults" => $max_results);
 	$param = http_build_query($param);
