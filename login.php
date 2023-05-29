@@ -1,7 +1,7 @@
 <?php
 	require_once('php/user_auth.php');
 	if(isAuth()) {
-		header("Location: account.php");
+		header("Location: home.php");
 		exit;
 	}
 

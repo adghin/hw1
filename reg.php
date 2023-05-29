@@ -52,7 +52,7 @@
 				$_SESSION["_bookclub_username"] = $_POST["username"];
 				$_SESSION["_bookclub_user_id"]  = mysqli_insert_id($connection);
 				mysqli_close($connection);
-				header("Location: login.php");
+				header("Location: account.php");
 				exit;
 			}
 		}
